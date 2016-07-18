@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scanes/world map.unity
+  isLoaded: 1
+  isActive: 1
