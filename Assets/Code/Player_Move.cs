@@ -24,8 +24,12 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) && this.transform.position.x == target.x && this.transform.position.y == target.y)
         {
 
-            current_tile = current_tile.Get_west();
-            target = current_tile.transform.position;
+            Tile_Behavior New_tile = current_tile.Get_west();
+            if (!(New_tile.CompareTag("Impassable"))) {
+
+                current_tile = current_tile.Get_west();
+                target = current_tile.transform.position;
+            }
 
             /*Vector3 position = this.transform.position;
             position.x = position.x - 0.1f;
@@ -34,8 +38,12 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) && this.transform.position.x == target.x && this.transform.position.y == target.y)
         {
 
-            current_tile = current_tile.Get_east();
-            target = current_tile.transform.position;
+            Tile_Behavior New_tile = current_tile.Get_east();
+            if (!(New_tile.CompareTag("Impassable"))) {
+
+                current_tile = current_tile.Get_east();
+                target = current_tile.transform.position;
+            }
 
             /*Vector3 position = this.transform.position;
             position.x = position.x + 0.1f;
@@ -44,8 +52,12 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) && this.transform.position.x == target.x && this.transform.position.y == target.y)
         {
 
-            current_tile = current_tile.Get_north();
-            target = current_tile.transform.position;
+                Tile_Behavior New_tile = current_tile.Get_north();
+                if (!(New_tile.CompareTag("Impassable"))) {
+
+                    current_tile = current_tile.Get_north();
+                    target = current_tile.transform.position;
+                }
 
             /*Vector3 position = this.transform.position;
             position.y = position.y + 0.1f;
@@ -54,8 +66,12 @@ public class Player_Move : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) && this.transform.position.x == target.x && this.transform.position.y == target.y)
         {
 
-            current_tile = current_tile.Get_south();
-            target = current_tile.transform.position;
+                    Tile_Behavior New_tile = current_tile.Get_south();
+                if (!(New_tile.CompareTag("Impassable"))) {
+
+                    current_tile = current_tile.Get_south();
+                    target = current_tile.transform.position;
+                }
 
             /*Vector3 position = this.transform.position;
             position.y = position.y - 0.1f;
