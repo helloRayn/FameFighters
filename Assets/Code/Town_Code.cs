@@ -5,6 +5,8 @@ public class Town_Code : MonoBehaviour {
 
     public Player_Move Player;
 
+    public Canvas UI;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,11 +14,22 @@ public class Town_Code : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*if (Input.GetMouseButtonDown(0)) {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray)) onclick();
-        }*/
-	}
+
+        if ((Player.Get_target().x == this.transform.position.x) && (Player.Get_target().y == this.transform.position.y)) {
+
+            if (!(UI.isActiveAndEnabled) && Player.transform.position.x == this.transform.position.x && Player.transform.position.y == this.transform.position.y) {
+
+                UI.enabled = true;
+                Debug.Log("Player here");
+            }
+
+            if (UI.isActiveAndEnabled && Player.transform.position.x != this.transform.position.x && Player.transform.position.y != this.transform.position.y) {
+
+                UI.enabled = false;
+                Debug.Log("Player not here");
+            }
+        }
+    }
     void onclick () {
 
         Debug.Log("target.x.ToString");

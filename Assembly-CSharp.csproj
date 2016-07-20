@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Player_Move.cs" />
+     <Compile Include="Assets\Code\Tile_Behavior.cs" />
      <Compile Include="Assets\Code\Town_Code.cs" />
+     <Compile Include="Assets\Code\Town_Manager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
